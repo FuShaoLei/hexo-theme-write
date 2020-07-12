@@ -1,0 +1,12 @@
+ <div class="index-outer">
+     <div class="index-inner">
+             <% Object.keys(theme.book).forEach(key => { %>
+        <a href="<%=url_for(theme.book[key])%>">
+            <div class="book">
+                <%=key%>
+            </div>
+        </a>
+    <% }); %>
+     </div>
+
+</div>

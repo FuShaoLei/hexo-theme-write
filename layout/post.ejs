@@ -1,0 +1,45 @@
+
+<div class="post-layout">
+  <div class="post-side">
+ <!-- <div class="post-categories">
+   <%=page.categories.data[0].name%>
+ </div> -->
+  
+<div class="post-relative">
+  <a  href="<%=url_for()%>" >
+    <div class="base">
+      首页
+    </div>
+  </a>
+  <% site.posts.sort('date',1).each(pos => {%>
+  <%if(pos.categories.data.length>0){%>
+    <%if(pos.categories.data[0].name===page.categories.data[0].name){%>
+      <a  href="<%=url_for(pos.path)%>" >
+      <div class="<%if(pos.title===page.title){%>me base<%}else{%>base<%}%>">
+        <%=pos.title%>
+      </div>
+    </a>
+    <%}%>
+  <%};%>
+<% }); %>
+</div>
+
+  </div>
+
+
+<div class="post-main">
+  <div class="post-content">
+    <div class="post-fore">
+      <h1 class="post-title"><%=page.title%></h1>
+      <section class="post-meta">
+        <time datetime="<%=page.date.toJSON()%>"><%=date(page.date,'YYYY年MM月DD日')%></time> by <span><%if(page.author){%><%= page.author%><%} else {%><%= theme.author%><%}%></span>
+      </section>
+    </div>
+      
+  <%-page.content%>
+  </div>
+
+</div>
+</div>
+
+
