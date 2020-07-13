@@ -1,11 +1,21 @@
 
 book:
-  无间道: /test1-1
-  倩女幽魂: /test2-1
-  叶问: /test3-1
+  网络原理: /network-0
+  算法基础: /algorithm-0
+  JavaSE: /javase-0
+  Android: /android-0
+  SPRING: /spring-0
+  HIBERNATE: /hibernate-0
+  MYBATIS: /mybatis-0
+  TODO: /todo-0
  
-
+title: Sorryfu #网站名称
 author: Sorryfu
+icon: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg
+
+toc:
+  max: 3
+  min: 2
 
 plugins:
   # 代码高亮，想要使用代码高亮，得先把根目录的_config.yml里的highlight的enable置成false

@@ -35,7 +35,9 @@
         <time datetime="<%=page.date.toJSON()%>"><%=date(page.date,'YYYY年MM月DD日')%></time> by <span><%if(page.author){%><%= page.author%><%} else {%><%= theme.author%><%}%></span>
       </section>
     </div>
-      
+    <%if(page.toc!==false){%>
+      <%- toc(page.content,{class:"toc",list_number:false,max_depth: theme.toc.max,min_depth: theme.toc.min}) %>
+    <%}%>
   <%-page.content%>
   </div>
 

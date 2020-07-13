@@ -6,7 +6,7 @@ if (is_tag()) pageTitle = 'Tag: ' + page.tag;
 if (is_category()) pageTitle = 'Category: ' + page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
-pageTitle += ' [ ' + config.title + ' ]';
+pageTitle += '  ' + theme.title ;
 %>
 
 <!DOCTYPE html>
@@ -14,6 +14,8 @@ pageTitle += ' [ ' + config.title + ' ]';
 <head>
   <meta charset="UTF-8">
   <title><%=pageTitle%></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="<%-theme.icon%>" type="image/x-icon">
   <%- css('css/writebook') %>
 
   <% if (config.highlight.enable != true) { %>
